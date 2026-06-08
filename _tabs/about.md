@@ -4,5 +4,14 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+# INFO #
+* Name: Sangbin Kim
+* Nick: fr0m1s9
+
+# Affiliation #
+* Team: DEMON (2025.02 ~ present)
+* KUS AICS 22th (2022.03 ~ present)
+
+# Interesting #
+
+* IOS (Study ~)

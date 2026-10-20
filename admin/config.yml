@@ -1,0 +1,45 @@
+# GitHub Pages is static: OAuth must be hosted on a trusted external service.
+# Replace this URL only after deploying and auditing an OAuth proxy.
+backend:
+  name: github
+  repo: fr0m1s9/fr0m1s9.github.io
+  branch: master
+  base_url: https://REPLACE-WITH-YOUR-WORKER.workers.dev
+  auth_endpoint: /auth
+
+site_url: https://fr0m1s9.github.io
+locale: ko
+media_folder: assets/img/posts
+public_folder: /assets/img/posts
+show_preview_links: true
+
+collections:
+  - name: posts
+    label: 게시글
+    label_singular: 게시글
+    folder: _posts
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}}'
+    fields:
+      - { name: title, label: 제목, widget: string }
+      - { name: date, label: 게시일, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss ZZ', date_format: 'YYYY-MM-DD', time_format: 'HH:mm:ss' }
+      - name: categories
+        label: 카테고리
+        widget: list
+        required: false
+        field: { label: 카테고리명, name: category, widget: string }
+      - name: tags
+        label: 태그
+        widget: list
+        required: false
+        field: { label: 태그명, name: tag, widget: string }
+      - { name: pin, label: 상단 고정, widget: boolean, required: false, default: false }
+      - { name: toc, label: 목차 표시, widget: boolean, required: false, default: true }
+      - { name: comments, label: 댓글, widget: boolean, required: false, default: false }
+      - { name: image, label: 대표 이미지, widget: image, required: false }
+      - { name: description, label: 설명, widget: text, required: false }
+      - { name: body, label: 본문, widget: markdown }

@@ -25,18 +25,13 @@
           <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
         </a>
       </li>
-      <!-- the real tabs -->
-      {% for tab in site.tabs %}
-        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-          <a href="{{ tab.url | relative_url }}" class="nav-link">
-            <i class="fa-fw {{ tab.icon }}"></i>
-            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-
-            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-      {% endfor %}
+      <!-- Curated research navigation -->
+      <li class="nav-item"><a class="nav-link" href="{{ '/target/' | relative_url }}"><i class="fa-fw fas fa-crosshairs"></i><span>TARGET</span></a></li>
+      <li class="nav-item"><a class="nav-link" style="padding-left:2rem" href="{{ '/target/browser/' | relative_url }}"><i class="fa-fw fas fa-folder"></i><span>Browser</span></a></li>
+      <li class="nav-item"><a class="nav-link" style="padding-left:3rem" href="{{ '/target/browser/chrome/' | relative_url }}"><i class="fa-fw fab fa-chrome"></i><span>Chrome</span></a></li>
+      <li class="nav-item"><a class="nav-link" style="padding-left:4rem" href="{{ '/target/browser/chrome/study/' | relative_url }}"><i class="fa-fw fas fa-book-open"></i><span>Study</span></a></li>
+      <li class="nav-item"><a class="nav-link" style="padding-left:4rem" href="{{ '/target/browser/chrome/exploit-lab/' | relative_url }}"><i class="fa-fw fas fa-flask"></i><span>Exploit Lab</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ '/about/' | relative_url }}"><i class="fa-fw fas fa-info-circle"></i><span>ABOUT</span></a></li>
     </ul>
   </nav>
 

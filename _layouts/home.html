@@ -46,6 +46,26 @@ layout: default
   {% endfor %}
 {% endif %}
 
+{% include home-portfolio-style.html %}
+<section class="portfolio-hero" aria-label="Security research introduction">
+  <div class="portfolio-eyebrow"><span class="portfolio-status-dot"></span> SECURITY RESEARCH ARCHIVE</div>
+  <h1>Exploring systems.<br><span>Understanding vulnerabilities.</span></h1>
+  <p class="portfolio-lead">Browser security, vulnerability research, and reverse engineering.<br>분석한 내용과 실험 과정을 기록하는 개인 연구 아카이브입니다.</p>
+  <div class="portfolio-actions">
+    <a class="portfolio-primary" href="{{ '/target/browser/chrome/' | relative_url }}">Explore Research <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    <a class="portfolio-secondary" href="{{ '/about/' | relative_url }}">About Me <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+  </div>
+  <div class="portfolio-topics"><span>FOCUS AREAS</span><span>V8 Engine</span><span>Browser Security</span><span>Exploitation</span></div>
+</section>
+<section class="portfolio-explore" aria-label="Research categories">
+  <div class="portfolio-section-header"><div><div class="portfolio-eyebrow">DISCOVER</div><h2>Research & Notes</h2></div><a href="{{ '/target/' | relative_url }}">All targets <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+  <div class="portfolio-grid">
+    <a class="portfolio-tile" href="{{ '/target/browser/chrome/study/' | relative_url }}"><span class="portfolio-tile-icon"><i class="fas fa-book-open" aria-hidden="true"></i></span><span class="portfolio-tile-index">01 / KNOWLEDGE</span><strong>Chrome Study</strong><span class="portfolio-tile-description">V8 internals, code paths, memory layouts and debugging notes.</span><span class="portfolio-tile-link">Explore notes <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a>
+    <a class="portfolio-tile" href="{{ '/target/browser/chrome/exploit-lab/' | relative_url }}"><span class="portfolio-tile-icon"><i class="fas fa-flask" aria-hidden="true"></i></span><span class="portfolio-tile-index">02 / HANDS-ON</span><strong>Exploit Lab</strong><span class="portfolio-tile-description">Reproduction, root cause analysis and hands-on exploitation labs.</span><span class="portfolio-tile-link">Explore labs <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a>
+  </div>
+</section>
+<div class="portfolio-section-header portfolio-post-heading"><div><div class="portfolio-eyebrow">FROM THE ARCHIVE</div><h2>Latest Writing</h2></div></div>
+
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for post in posts %}
     <article class="card-wrapper card">
